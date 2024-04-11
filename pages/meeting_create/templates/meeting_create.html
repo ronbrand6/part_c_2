@@ -1,0 +1,50 @@
+ {% extends 'base.html' %}
+    {%block title %} צור פגישה קשר-משרד קרן המבר עורכת דין {% endblock%}
+
+  {%block main%}
+
+<link rel="stylesheet" type="text/css" href="../static/css/meeting_create.css">
+
+ <h1 class="h1">קביעת פגישה</h1>
+<form  method="post" action="/meeting_create">
+        <label for="meetingType">סוג פגישה</label>
+        <select id="meetingType" name="meetingType">
+            <option value="consultation">ייעוץ</option>
+            <option value="follow-up">מעקב</option>
+            <option value="presentation">הצגה</option>
+
+        </select>
+
+        <label for="date">תאריך</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="hour">שעה</label>
+        <select id="hour" name="hour">
+            <option value="9:00 ">9:00</option>
+            <option value="10:00">10:00 </option>
+            <option value="11:00 ">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00 ">13:00 </option>
+            <option value="15:00">15:00 </option>
+            <option value="16:00">16:00 </option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00 </option>
+
+        </select>
+
+
+
+            <button type="submit" id="scudelAppointment">קבע פגישה</button>
+    <script>
+document.getElementById("scudelAppointment").onclick = function() {
+    alert("הפגישה נקבעה בהצלחה!");
+    window.location.href = "/meeting_user)";
+};
+</script>
+
+    </form>
+
+     <script src="../static/js/meeting_create.js"></script>
+
+
+{% endblock%}

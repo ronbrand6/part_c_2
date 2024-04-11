@@ -1,0 +1,36 @@
+.flex_con{
+    display: flex;
+}
+  form {
+
+            padding: 20px;
+            border-radius: 8px;
+
+            width: 600px; /* Adjust the width as needed */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-half {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-half {
+            width: 48%;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: calc(100% - 8px);
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }

@@ -1,0 +1,117 @@
+
+.hello-text {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    background-color: #1b1b48; /* Dark Gray Text Color */
+    bottom: 5px;
+
+        }
+
+.index_text{
+   width:600px; /* Adjust the width as needed */
+    float: right;
+    margin-top: 20px;
+    text-align: right;
+    direction: rtl;
+    line-height: 160%;
+    flex-shrink: 1;
+
+        }
+.index_text h1 {
+    background-color: #1a1a2e; /* Darker Blue Form Background */
+    padding: 50px;
+
+    text-align: center;
+    font-family: sans-serif;
+    box-snap: center;
+    align-items: center;
+    width: inherit;
+    color: white;
+    animation-name: slideInFromLeft;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.index_text p {
+
+    animation-name: slideInFromRight;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.flex-container{
+   width: 100%;
+    height: auto;
+    display: flex;
+   flex-direction: row;
+    margin: 50px;
+    justify-content: center;
+
+
+}
+.flex-box{
+
+
+
+}
+.photo{
+     padding: 50px;
+    width: 110%;
+    border-left: 0;
+}
+.details-link {
+    list-style-type: none;
+    display: inline-block;
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+    padding: 50px 0 0;
+    text-align: center;
+
+
+}
+.details-link li {
+    display: inline-block;
+    padding: 0 0 70px;
+    width: 60%;
+    vertical-align: top;
+
+}
+.details-link li.medium {padding-bottom: 40px;}
+.details-link li.large {padding-bottom: 15px;}
+
+ .details-link li a{
+	color: #000;
+    display: block;
+
+}
+.details-link li a img{
+
+    margin-bottom: 18px;
+
+}
+.details-link li a p{
+	font-size: 18px;
+}

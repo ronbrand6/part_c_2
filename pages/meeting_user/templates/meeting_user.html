@@ -1,0 +1,50 @@
+ {% extends 'base.html' %}
+    {%block title %} הפגישות שלי-משרד קרן המבר עורכת דין {% endblock%}
+
+  {%block main%}
+   <link rel="stylesheet" type="text/css" href="../static/css/meeting_user.css">
+
+
+  <h1 class="h1"> הפגישות שלי:</h1>
+
+<ul>
+  {% for session1 in session.get('user_meeting') %}
+    <li>
+      <strong>סוג הפגישה:</strong> {{ session1.get('meetingType') }}<br>
+      <strong>תאריך:</strong> {{ session1.get('date') }}<br>
+      <strong>שעה:</strong> {{ session1.get('time') }}
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+
+
+  <div class="container">
+
+    <ul id="meetings-list">
+      <!-- Meetings will be dynamically added here -->
+    </ul>
+  </div>
+   <div>
+<button id="addMeet">הוסף פגישה</button>
+
+<script>
+document.getElementById("addMeet").onclick = function() {
+    window.location.href = "/meeting_create";
+};
+</script>
+      </div>
+  <div>
+<button id="comeback">חזור</button>
+
+<script>
+document.getElementById("comeback").onclick = function() {
+    window.location.href = "/user_profile";
+};
+</script>
+
+      </div>
+  <script src="../static/js/meeting_user.js"></script>
+{% endblock%}

@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+    {%block title %} פרופיל אישי -משרד קרן המבר עורכת דין {% endblock%}
+
+  {%block main%}
+
+<link rel="stylesheet" type="text/css" href="../static/css/user_profile.css">
+
+<h1 class="h1">פרופיל אישי</h1>
+<p>{{session.get('first_name')}} !כיף שחזרת אלינו לאתר</p>
+
+
+<form action="#" method="post">
+    <div class="left-half" flex_con>
+<button id="myMeetings" type="button">הפגישות שלי</button>
+
+<script>
+document.getElementById("myMeetings").onclick = function() {
+    window.location.href = "/meeting_user";
+};
+</script>
+
+
+        <button id="saveButton" type="button" style="display: none;">שמור</button>
+    </div>
+    <p>הפרטיים האישיים שלך הם:</p>
+
+    <div class="right-half">
+
+        <p for="firstName">{{session.get('first_name')}} :שם פרטי</p>
+        <p for="lastName">{{session.get('last_name')}} :שם משפחה</p>
+        <p for="email">{{session.get('email')}} :מייל</p>
+        <p for="age">{{session.get('age')}} :גיל</p>
+        <p for="phone">{{session.get('phone')}} :טלפון</p>
+
+
+        <div class="errorMsg"></div>
+    </div>
+
+    <div id="meetingList"></div>
+
+</form>
+
+<script src="../static/js/user_profile.js"></script>
+{%endblock%}

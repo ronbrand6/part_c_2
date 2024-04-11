@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+    {%block title %} יצירת חשבון -משרד קרן המבר עורכת דין {% endblock%}
+
+  {%block main%}
+
+     <h1 class="h1"> יצירת חשבון</h1>
+<form method="POST" action="/user_create" >
+
+        <label for="firstName">שם פרטי:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">שם משפחה:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="age">גיל:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="email">כתובת מייל:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">סיסמא:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="phoneNumber">מספר טלפון:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <div class="errorMsg"></div>
+        <div>
+            <button type="submit" id="signupBtn">צור חשבון</button>
+<script>
+document.getElementById("signupBtn").onclick = function() {
+    window.location.href = "/user_profile";
+};
+</script>
+        </div>
+    <button class="google" onclick="location.href='https://mail.google.com'"> התחברות עם מייל גוגל</button>
+
+    </form>
+    <script src="../static/js/user_create.js"></script>
+
+  {%endblock%}
